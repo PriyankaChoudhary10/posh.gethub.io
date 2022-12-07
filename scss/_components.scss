@@ -1,0 +1,165 @@
+//-------------------------------------------
+/*Slider Right and Left Navigation Buttons*/
+
+//-------------------------------------------
+.carousel-control-next-icon {
+    background-image: none;
+}
+
+.carousel-control-prev-icon {
+    background-image: none;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    position: relative;
+    display: block;
+}
+
+.carousel-control-next-icon:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 28px;
+    @include border-radius(3px);
+    top: -2px;
+    background: $white;
+    left: -1px;
+    transform: rotate(36deg);
+    @include transition;
+}
+
+.carousel-control-next-icon:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 28px;
+    @include border-radius(3px);
+    top: 15px;
+    background: $white;
+    left: 0;
+    transform: rotate(-43deg);
+    @include transition;
+}
+
+.carousel-control-prev-icon:before {
+        content: "";
+    position: absolute;
+    height: 3px;
+    width: 28px;
+    @include border-radius(3px);
+    top: -2px;
+    background: $white;
+    left: -1px;
+    transform: rotate(-38deg);
+    @include transition;
+}
+
+.carousel-control-prev-icon:after {
+      content: "";
+    position: absolute;
+    height: 3px;
+    width: 28px;
+    @include border-radius(3px);
+    top: 15px;
+    background: $white;
+    left: 0;
+    transform: rotate(38deg);
+    @include transition;
+}
+
+.carousel-control-next:hover .carousel-control-next-icon:before {
+    transform: rotate(48deg);
+}
+
+.carousel-control-next:hover .carousel-control-next-icon:after {
+    transform: rotate(-51deg);
+    left: 0px;
+    top: 17px;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon:before {
+    transform: rotate(-45deg);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon:after {
+    transform: rotate(45deg);
+    left: 0px;
+    top: 17px;
+}
+
+
+
+/*youtube top bar loader*/
+.youtubeloader
+{}
+.youtubeloader {
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.youtubeloader {
+    -webkit-animation-name: horizontalProgressBar;
+    animation-name: horizontalProgressBar;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    background: $themepink;
+    height: 3px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 0%;
+    z-index: 9999;
+}
+
+@keyframes horizontalProgressBar
+{
+    0%   {width: 0%;}
+    25%  {width: 22%;}
+    50%  {width: 55%;}
+    75%  {width: 83%;}
+    100% {width:100%;}
+}
+
+@-webkit-keyframes horizontalProgressBar /* Safari and Chrome */
+{
+    0%   {width: 0%;}
+    25%  {width: 22%;}
+    50%  {width: 55%;}
+    75%  {width: 83%;}
+    100% {width:100%;}
+}
+
+
+
+.footersection
+{
+        background: $themepink;
+    padding: 14px 0;
+    
+    
+    .links
+    { color: $darkpink;
+        margin-bottom: 0;
+        a{
+        color:#fff;
+            &:hover,
+            &:focus,
+            &:active
+            {
+                color:#fff;
+                text-decoration: none;
+            }
+        }
+            
+    }
+    .links.clrwhite
+    {
+        color:$white;
+    }
+}
